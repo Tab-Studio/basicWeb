@@ -32,7 +32,9 @@ if(run){
 		let body = dc('body'), 
 		mask = dc('div'), 
 		box = dc('div'), 
-		title = dc('h1');
+		title = dc('h1'), 
+		hr = dc('hr'), 
+		index = dc('p');
 
 		mask.style.backgroundColor = 'white';
 		mask.style.display = 'flex';
@@ -61,8 +63,15 @@ if(run){
 		title.style.fontSize = '3vw';
 		title.style.color = 'black';
 
+		hr.style.margin = '2vw 0px 2vw 0px';
+
+		index.innerText = '此網頁被入控管清單，\n故無法造訪！';
+		index.style.fontSize = '1.5vw';
+		index.style.color = 'black';
+
 		box.appendChild(title);
-		box.appendChild(dc('hr'));
+		box.appendChild(hr);
+		box.appendChild(index);
 		mask.appendChild(box);
 		body.appendChild(mask);
 		document.querySelector('html').appendChild(body);
