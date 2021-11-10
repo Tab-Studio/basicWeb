@@ -1,0 +1,22 @@
+{
+  "name": "basicWeb",
+  "description": "Nothing preview!",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "/img/icon.png", 
+    "16": "/img/icon.png",
+    "48": "/img/icon.png"
+  },
+  "content_scripts": [ {
+    "all_frames": false,
+    "js": [ "basicWeb.js" ],
+    "matches": [ "http://*/*", "https://*/*" ],
+    "run_at": "document_end"
+  } ],
+  "homepage_url": "https://sites.google.com/view/kiwistation/%E9%A6%96%E9%A0%81?authuser=0",
+  "incognito": "spanning",
+  "omnibox": {
+     "keyword": "kiwi"
+  }
+}
